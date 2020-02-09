@@ -1,0 +1,49 @@
+2020-02-05 05:52:04 Error: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in D:\xampp\htdocs\arcapay\products\vendor\cakephp\cakephp\src\Database\Driver.php on line 92
+Stack Trace:
+#0 D:\xampp\htdocs\arcapay\products\vendor\cakephp\cakephp\src\Database\Driver.php(92): PDO->__construct('mysql:host=loca...', 'my_app', 'secret', Array)
+#1 D:\xampp\htdocs\arcapay\products\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 D:\xampp\htdocs\arcapay\products\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 D:\xampp\htdocs\arcapay\products\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 D:\xampp\htdocs\arcapay\products\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 D:\xampp\htdocs\arcapay\products\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 D:\xampp\htdocs\arcapay\products\vendor\cakephp\cakephp\src\Database\Connection.php(390): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 D:\xampp\htdocs\arcapay\products\vendor\cakephp\migrations\src\Shell\Task\MigrationSnapshotTask.php(109): Cake\Database\Connection->getSchemaCollection()
+#8 D:\xampp\htdocs\arcapay\products\vendor\cakephp\migrations\src\Shell\Task\MigrationSnapshotTask.php(41): Migrations\Shell\Task\MigrationSnapshotTask->getCollection(Object(Cake\Database\Connection))
+#9 D:\xampp\htdocs\arcapay\products\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\MigrationSnapshotTask->bake('Initial')
+#10 D:\xampp\htdocs\arcapay\products\vendor\cakephp\cakephp\src\Console\Shell.php(531): Bake\Shell\Task\SimpleBakeTask->main('Initial')
+#11 D:\xampp\htdocs\arcapay\products\vendor\cakephp\cakephp\src\Console\Shell.php(524): Cake\Console\Shell->runCommand(Array, false, Array)
+#12 D:\xampp\htdocs\arcapay\products\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#13 D:\xampp\htdocs\arcapay\products\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 D:\xampp\htdocs\arcapay\products\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+2020-02-05 06:00:10 Error: [InvalidArgumentException] There was a problem connecting to the database: SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in D:\xampp\htdocs\arcapay\products\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\MysqlAdapter.php on line 127
+Stack Trace:
+#0 D:\xampp\htdocs\arcapay\products\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(136): Phinx\Db\Adapter\MysqlAdapter->connect()
+#1 D:\xampp\htdocs\arcapay\products\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(489): Phinx\Db\Adapter\PdoAdapter->getConnection()
+#2 D:\xampp\htdocs\arcapay\products\vendor\cakephp\migrations\src\CakeAdapter.php(56): Phinx\Db\Adapter\AdapterWrapper->getConnection()
+#3 D:\xampp\htdocs\arcapay\products\vendor\cakephp\migrations\src\Command\CommandTrait.php(78): Migrations\CakeAdapter->__construct(Object(Phinx\Db\Adapter\TimedOutputAdapter), Object(Cake\Database\Connection))
+#4 D:\xampp\htdocs\arcapay\products\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(74): Migrations\Command\Migrate->bootstrap(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 D:\xampp\htdocs\arcapay\products\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\xampp\htdocs\arcapay\products\vendor\cakephp\migrations\src\Command\Migrate.php(67): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\xampp\htdocs\arcapay\products\vendor\symfony\console\Command\Command.php(255): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\xampp\htdocs\arcapay\products\vendor\symfony\console\Application.php(915): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\xampp\htdocs\arcapay\products\vendor\symfony\console\Application.php(272): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\xampp\htdocs\arcapay\products\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\xampp\htdocs\arcapay\products\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(109): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\xampp\htdocs\arcapay\products\vendor\cakephp\cakephp\src\Console\Shell.php(531): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#13 D:\xampp\htdocs\arcapay\products\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(165): Cake\Console\Shell->runCommand(Array, true, Array)
+#14 D:\xampp\htdocs\arcapay\products\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#15 D:\xampp\htdocs\arcapay\products\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#16 D:\xampp\htdocs\arcapay\products\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#17 {main}
+
+
+2020-02-06 09:12:43 Error: [RuntimeException] Unknown command `cake seed`. Run `cake --help` to get the list of valid commands. in D:\xampp\htdocs\arcapay\products\vendor\cakephp\cakephp\src\Console\CommandRunner.php on line 347
+Stack Trace:
+#0 D:\xampp\htdocs\arcapay\products\vendor\cakephp\cakephp\src\Console\CommandRunner.php(157): Cake\Console\CommandRunner->resolveName(Object(Cake\Console\CommandCollection), Object(Cake\Console\ConsoleIo), 'seed')
+#1 D:\xampp\htdocs\arcapay\products\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+
