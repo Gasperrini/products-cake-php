@@ -1,5 +1,6 @@
-# ArcaPay assignment
+*  Created a web app with following functionality:
 
-
-* Web application contains 2 assignments in app root page
-* Note: Project runs well on WAMP or XAMP
+    -Product list (CRUD)
+    -XML exporting all products
+    -Importing product data from remote json
+    -Method to find related products and display those in product view page.
