@@ -1,4 +1,4 @@
-*  Created a web app with following functionality:
+*  Created a CakePHP web app with following functionality:
 
     -Product list (CRUD)
     
